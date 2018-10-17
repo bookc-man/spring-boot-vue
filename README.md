@@ -1,39 +1,34 @@
-# spring boot vue 
+# spring-boot-vue
 
 #### 项目介绍
-{**以下是码云平台说明，您可以替换为您的项目简介**
-码云是开源中国推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
 
 #### 软件架构
-软件架构说明
+com.example.demo ：api项目springboot REST API </br>
+com.example.demo.client： web前端项目 vue+vue-router+axios+webpack
 
 
-#### 安装教程
+#### 运行
 
-1. xxxx
-2. xxxx
-3. xxxx
+进入api项目运行springboot 项目，在浏览器地址输入：http://localhost:8081/index.html
 
-#### 使用说明
+#### 开发
 
-1. xxxx
-2. xxxx
-3. xxxx
+进入web目录执行如下命令
 
-#### 参与贡献
+#### 安装依赖
 
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
+npm install
 
+#### 在 localhost:8002 启动前端项目
 
-#### 码云特技
+npm run dev</br>
 
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+由于我在web项目中已经配置了端口转发，将数据转发到SpringBoot上，因此项目启动之后，在浏览器中输入 http://localhost:8002 就可以访问我们的前端项目了，所有的请求通过端口转发将数据传到SpringBoot中（注意此时不要关闭SpringBoot项目）。
+PS：关于端口转发和前端项目测试时候的端口修改，请查看 com.example.demo.client/config/index.js文件
+
+#### 上线
+
+npm run build</br>
+
+该命令执行成功之后，api目录com.example.demo\src\main\resources\static下将生成页面所需要的脚本。
+最后就可以将项目发布到开发、生产环境中了
